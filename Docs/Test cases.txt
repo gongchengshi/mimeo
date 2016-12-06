@@ -1,0 +1,113 @@
+User clicks on an absolute URL to Non-Mimeo page on a Mimeo page
+	Put up a warning that the user is leaving the sandbox.
+
+User clicks on a relative URL on a Mimeo page
+	The relative URL is '/'
+	The relative URL is '../pagename' where the result would be higher than root.
+	The relative URL is '../../pagename' where the result would be higher than root.	
+	The relative URL is '../pagename' where the result is correct
+	The relative URL is '../../pagename' where the result is correct
+
+Redirect to local Mimeo
+Redirect to remote Mimeo
+Redirect to local non-Mimeo
+Redirect to remote non-Mimeo
+
+
+Each Mimeo site has the following structure:
+/
+/?param1=value
+/file1.html
+/file1.html?param1=value
+/file2.html
+/path1/
+/path1/?param1=value
+/path1/file1.html
+/path1/file1.html?param1=value
+/path1/file2.html
+/path2/
+/path2/?param1=value
+/path2/file1.html
+/path2/file1.html?param1=value
+/path2/file2.html
+
+// Each path has a single frag1 fragment.
+
+// Job 1 sites
+http://site1/
+http://site2/
+
+// Job 2 sites
+http://site1/
+http://site3/
+
+
+// Navigating directly (using an absolute url) to mimeo site without a referrer
+none -> http://mimeo/job1/site1/
+none -> http://mimeo/job1/site1/file1.html
+none -> http://mimeo/job1/site1/file1.html#frag1
+none -> http://mimeo/job1/site1/path1
+none -> http://mimeo/job1/site1/path1/file1.html
+*none -> http://mimeo/bad-job/site1/
+*none -> http://mimeo/job1/site2/
+*none -> http://mimeo/job1/site1/bad-path
+
+// Navigating to mimeo site using an absolute URL from a non-mimeo site
+http://not-mimeo/ -> http://mimeo/job1/site1/
+http://not-mimeo/ -> http://mimeo/job1/site1/file1.html
+http://not-mimeo/ -> http://mimeo/job1/site1/file1.html#frag1
+http://not-mimeo/ -> http://mimeo/job1/site1/path1
+http://not-mimeo/ -> http://mimeo/job1/site1/path1/file1.html
+*http://not-mimeo/ -> http://mimeo/bad-job/site1/
+*http://not-mimeo/ -> http://mimeo/job1/site2/
+*http://not-mimeo/ -> http://mimeo/job1/site1/bad-path
+
+// Navigating to mimeo site using an absolute URL from a mimeo site with the same job
+http://mimeo/job1/site1/ -> http://mimeo/job1/site1/file1.html
+
+// Navigating to mimeo site using an absolute URL from a mimeo site with a different job
+http://mimeo/job1/site1/ -> http://mimeo/job2/site1/
+http://mimeo/job1/site1/ -> http://mimeo/job2/site1/file1.html
+http://mimeo/job1/site1/ -> http://mimeo/job2/site1/file1.html#frag1
+http://mimeo/job1/site1/ -> http://mimeo/job2/site3/file1.html
+*http://mimeo/job1/site1/ -> http://mimeo/job2/site2/
+*http://mimeo/job1/site1/ -> http://mimeo/bad-job/site1/
+
+// Navigating within site using root-relative url
+<all files in job1/site1> -> <all files job1/site1 site>
+*http://mimeo/job1/site1/ -> /?param1=bad-value
+*http://mimeo/job1/site1/ -> /bad-file.html
+*http://mimeo/job1/site1/ -> /path1/bad-file.html
+http://mimeo/job1/site1/ -> /bad-path/../
+http://mimeo/job1/site1/ -> /bad-path/../file1.html
+http://mimeo/job1/site1/ -> /bad-path/../../file1.html
+http://mimeo/job1/site1/ -> /../file1.html
+http://mimeo/job1/site1/ -> /../../file1.html
+http://mimeo/job1/site1/ -> /.././file1.html
+*http://mimeo/job1/site1/ -> /../bad-path/file1.html
+
+// Navigating within site using current-directory-relative URL
+http://mimeo/job1/site1/ -> file1.html
+http://mimeo/job1/site1/ -> ?param1=value
+http://mimeo/job1/site1/ -> path1/file1.html
+http://mimeo/job1/site1/file1.html -> file1.html#frag1
+http://mimeo/job1/site1/file1.html -> ?param1=value
+http://mimeo/job1/site1/file1.html -> path1/file1.html
+http://mimeo/job1/site1/ -> ../?param1=value
+http://mimeo/job1/site1/ -> ../file2.html
+http://mimeo/job1/site1/path1/ -> file1.html
+http://mimeo/job1/site1/path1/file1.html -> file2.html
+http://mimeo/job1/site1/path1/file1.html -> ?param1=value
+http://mimeo/job1/site1/path1/file1.html -> ../?param1=value
+http://mimeo/job1/site1/path1/file1.html -> ../file2.html
+http://mimeo/job1/site1/path1/file1.html -> ../path2/file1.html
+http://mimeo/job1/site1/path1/file1.html -> ../../path2/file1.html
+http://mimeo/job1/site1/path1/file1.html -> ../path2/../file1.html
+*http://mimeo/job1/site1/path1/file1.html -> path2
+
+
+// Navigating to a live site via mimeo
+http://not-mimeo/ -> http://mimeo/?url=http://www.example.com/path/file.html?param=value
+http://mimeo/job1/site1/ -> http://mimeo/?url=http://www.example.com/path/file.html?param=value
+
+

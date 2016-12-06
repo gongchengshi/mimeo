@@ -1,0 +1,17 @@
+Warn the user each time they are navigating away from a Mimeo site.
+Probably need to use MimeoGraph to transform the external URLs in the served content.
+http://not-mimeo/ -> http://mimeo/?url=http://www.example.com/path/file.html?param=value
+http://mimeo/job1/site1/ -> http://mimeo/?url=http://www.example.com/path/file.html?param=value
+-------------------------------------------------------------------------------
+Simplify ResolveAddress in MimeoProxy by collapsing duplicate code in a way that maintains clarity.
+-------------------------------------------------------------------------------
+Fix issue with Mimeo when there are more ../ than there are directories in the path (go to root)?
+-------------------------------------------------------------------------------
+Have Mimeo's 404 be a list of other possible places to look for the same URL but different version/crawl time.
+-------------------------------------------------------------------------------
+Display Mimeo page in frame - show the time the page was crawled at the top and a link to the original page. This shows that the user is still within the bounds of the crawled site and hasn't accidently moved to the live site.
+-------------------------------------------------------------------------------
+
+webapps-dev.ad.selinc.com/mimeo
+https://mimeo.ad.selinc.com/
+\\wpul-iisdev\mimeo

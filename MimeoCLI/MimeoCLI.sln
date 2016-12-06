@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MimeoCLI", "MimeoCLI.csproj", "{7FA50A89-DB65-415F-B0E0-7F9CE69493E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "..\..\DotNet-Common\Common\Common.csproj", "{DD93FCFF-3B20-4877-B00C-97905F718CDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mimeo", "..\Mimeo\Mimeo.csproj", "{A4F33E22-B1FD-4AB6-8F54-27A6090679CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mimeo.Data", "..\Mimeo.Data\Mimeo.Data.csproj", "{907DFA5A-C982-4143-9BE4-E1CF716AACA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections.Generic", "..\..\DotNet-Collections.Generic\Collections.Generic\Collections.Generic.csproj", "{1DC4D59B-9707-4912-B32F-D066E57D3528}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug MimeoCmd|Any CPU = Debug MimeoCmd|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Test|Any CPU = Test|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FA50A89-DB65-415F-B0E0-7F9CE69493E5}.Debug MimeoCmd|Any CPU.ActiveCfg = Debug MimeoCmd|Any CPU
+		{7FA50A89-DB65-415F-B0E0-7F9CE69493E5}.Debug MimeoCmd|Any CPU.Build.0 = Debug MimeoCmd|Any CPU
+		{7FA50A89-DB65-415F-B0E0-7F9CE69493E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FA50A89-DB65-415F-B0E0-7F9CE69493E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FA50A89-DB65-415F-B0E0-7F9CE69493E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FA50A89-DB65-415F-B0E0-7F9CE69493E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FA50A89-DB65-415F-B0E0-7F9CE69493E5}.Test|Any CPU.ActiveCfg = Debug MimeoCmd|Any CPU
+		{7FA50A89-DB65-415F-B0E0-7F9CE69493E5}.Test|Any CPU.Build.0 = Debug MimeoCmd|Any CPU
+		{DD93FCFF-3B20-4877-B00C-97905F718CDF}.Debug MimeoCmd|Any CPU.ActiveCfg = Debug MimeoCmd|Any CPU
+		{DD93FCFF-3B20-4877-B00C-97905F718CDF}.Debug MimeoCmd|Any CPU.Build.0 = Debug MimeoCmd|Any CPU
+		{DD93FCFF-3B20-4877-B00C-97905F718CDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD93FCFF-3B20-4877-B00C-97905F718CDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD93FCFF-3B20-4877-B00C-97905F718CDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD93FCFF-3B20-4877-B00C-97905F718CDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD93FCFF-3B20-4877-B00C-97905F718CDF}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{DD93FCFF-3B20-4877-B00C-97905F718CDF}.Test|Any CPU.Build.0 = Test|Any CPU
+		{A4F33E22-B1FD-4AB6-8F54-27A6090679CD}.Debug MimeoCmd|Any CPU.ActiveCfg = Debug MimeoCmd|Any CPU
+		{A4F33E22-B1FD-4AB6-8F54-27A6090679CD}.Debug MimeoCmd|Any CPU.Build.0 = Debug MimeoCmd|Any CPU
+		{A4F33E22-B1FD-4AB6-8F54-27A6090679CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4F33E22-B1FD-4AB6-8F54-27A6090679CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4F33E22-B1FD-4AB6-8F54-27A6090679CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4F33E22-B1FD-4AB6-8F54-27A6090679CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4F33E22-B1FD-4AB6-8F54-27A6090679CD}.Test|Any CPU.ActiveCfg = Debug MimeoCmd|Any CPU
+		{A4F33E22-B1FD-4AB6-8F54-27A6090679CD}.Test|Any CPU.Build.0 = Debug MimeoCmd|Any CPU
+		{907DFA5A-C982-4143-9BE4-E1CF716AACA0}.Debug MimeoCmd|Any CPU.ActiveCfg = Debug MimeoCmd|Any CPU
+		{907DFA5A-C982-4143-9BE4-E1CF716AACA0}.Debug MimeoCmd|Any CPU.Build.0 = Debug MimeoCmd|Any CPU
+		{907DFA5A-C982-4143-9BE4-E1CF716AACA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{907DFA5A-C982-4143-9BE4-E1CF716AACA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{907DFA5A-C982-4143-9BE4-E1CF716AACA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{907DFA5A-C982-4143-9BE4-E1CF716AACA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{907DFA5A-C982-4143-9BE4-E1CF716AACA0}.Test|Any CPU.ActiveCfg = Debug MimeoCmd|Any CPU
+		{907DFA5A-C982-4143-9BE4-E1CF716AACA0}.Test|Any CPU.Build.0 = Debug MimeoCmd|Any CPU
+		{1DC4D59B-9707-4912-B32F-D066E57D3528}.Debug MimeoCmd|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DC4D59B-9707-4912-B32F-D066E57D3528}.Debug MimeoCmd|Any CPU.Build.0 = Debug|Any CPU
+		{1DC4D59B-9707-4912-B32F-D066E57D3528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DC4D59B-9707-4912-B32F-D066E57D3528}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DC4D59B-9707-4912-B32F-D066E57D3528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DC4D59B-9707-4912-B32F-D066E57D3528}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DC4D59B-9707-4912-B32F-D066E57D3528}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{1DC4D59B-9707-4912-B32F-D066E57D3528}.Test|Any CPU.Build.0 = Test|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,36 @@
+﻿@using SEL
+@using Mimeo
+@model IEnumerable<Mimeo.Data.Job>
+
+@{
+    ViewBag.Title = "Available Websites";
+}
+
+<h1>Available Websites</h1>
+
+@foreach (var job in Model)
+{
+   <p>@job.Name</p>
+   <ul>
+      @foreach (var domain in job.Domains)
+      {
+         <li>
+            @if (string.IsNullOrEmpty(domain.MimeoUrl))
+            {
+               @domain.Name
+            }
+            else
+            {
+               if (domain.Redirects)
+               {
+                  @:@domain.Name -> <a href="@Globals.HostAddress/@job.Name/@domain.MimeoUrl" target="_blank">@domain.MimeoUrl.RemoveFromEnd("index.html")</a>
+               }
+               else
+               {
+                  <a href="@Globals.HostAddress/@job.Name/@domain.MimeoUrl" target="_blank">@domain.Name</a>
+               }
+            }
+         </li>
+      }
+   </ul>
+}
